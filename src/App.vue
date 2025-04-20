@@ -7,16 +7,17 @@
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue';
-import Hero from './components/Hero.vue';
-import Footer from './components/Footer.vue';
+import AppNavbar from './components/AppNavbar.vue';
+import HeroSection from './components/HeroSection.vue';
+import AppFooter from './components/AppFooter.vue';
+
 
 export default {
   name: 'App',
   components: {
-    Navbar,
-    Hero,
-    Footer
+    AppNavbar,
+    HeroSection,
+    AppFooter
   }
 };
 </script>

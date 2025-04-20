@@ -8,9 +8,5 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 // Configure Amplify with the exported config
 Amplify.configure(awsExports)
 
-// Set up Amplify UI Web Components (for auth forms like <amplify-authenticator>)
-applyPolyfills().then(() => {
-  defineCustomElements(window)
-})
 
 createApp(App).mount('#app')
