@@ -1,14 +1,14 @@
 <template>
   <div id="app">
-    <Navbar />
-    <Hero />
-    <Footer />
+    <AppNavbar />
+    <HeroSelection />
+    <AppFooter />
   </div>
 </template>
 
 <script>
 import AppNavbar from './components/AppNavbar.vue';
-import HeroSection from './components/HeroSection.vue';
+import HeroSelection from './components/HeroSelection.vue';
 import AppFooter from './components/AppFooter.vue';
 
 
@@ -16,7 +16,7 @@ export default {
   name: 'App',
   components: {
     AppNavbar,
-    HeroSection,
+    HeroSelection,
     AppFooter
   }
 };
