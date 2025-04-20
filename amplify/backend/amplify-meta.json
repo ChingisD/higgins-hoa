@@ -1,0 +1,87 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-higgins-dev-e5de6-authRole",
+      "UnauthRoleArn": "arn:aws:iam::448383792778:role/amplify-higgins-dev-e5de6-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::448383792778:role/amplify-higgins-dev-e5de6-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-higgins-dev-e5de6-deployment",
+      "UnauthRoleName": "amplify-higgins-dev-e5de6-unauthRole",
+      "StackName": "amplify-higgins-dev-e5de6",
+      "StackId": "arn:aws:cloudformation:us-east-1:448383792778:stack/amplify-higgins-dev-e5de6/c3b1fbd0-1b15-11f0-9081-0affda198763",
+      "AmplifyAppId": "d1fl5gial2socp"
+    }
+  },
+  "auth": {
+    "higginscdad7a4b": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-higgins-dev-e5de6-deployment/amplify-cfn-templates/auth/higginscdad7a4b-cloudformation-template.json",
+        "logicalId": "authhigginscdad7a4b"
+      },
+      "lastPushTimeStamp": "2025-04-19T03:08:12.582Z",
+      "output": {
+        "UserPoolId": "us-east-1_jBFNmn9VF",
+        "AppClientIDWeb": "11rcmfra4kd3fhreeta27o2iq4",
+        "AppClientID": "3d1i38ck68a96abouqtn6al009",
+        "IdentityPoolId": "us-east-1:c6e72157-ec93-4b11-903b-b882a2748f90",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:448383792778:userpool/us-east-1_jBFNmn9VF",
+        "IdentityPoolName": "higginscdad7a4b_identitypool_cdad7a4b__dev",
+        "UserPoolName": "higginscdad7a4b_userpool_cdad7a4b"
+      },
+      "lastPushDirHash": "EdySUnTxaHrB7EqoWbJ4m3XQ64s="
+    }
+  },
+  "api": {
+    "higgins": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "higginscdad7a4b",
+          "attributes": [
+            "UserPoolId"
+          ]
+        }
+      ],
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authhigginscdad7a4b"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        }
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-higgins-dev-e5de6-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apihiggins"
+      },
+      "lastPushTimeStamp": "2025-04-19T03:08:47.171Z"
+    }
+  }
+}

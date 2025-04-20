@@ -1,0 +1,13 @@
+{
+    "AppSyncApiName": "higgins",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authhigginscdad7a4b",
+            "Outputs.UserPoolId"
+        ]
+    },
+    "S3DeploymentBucket": "amplify-higgins-dev-e5de6-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/d8bddeb197dbd5d96240d703552bde99451c067e"
+}
