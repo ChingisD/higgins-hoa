@@ -1,34 +1,45 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Higgins HOA</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </template>
-  
-  <script>
-  export default {
-    name: "AppNavbar"
-  };
-  </script>
-  
-  <style scoped>
-  /* You can customize the navbar styles here */
-  </style>
-  
+  <nav class="navbar">
+    <ul>
+      <li><router-link to="/">Home</router-link></li>
+      <li><router-link to="/about">About</router-link></li>
+      <li><router-link to="/contact">Contact</router-link></li>
+      <li><router-link to="/dashboard">Dashboard</router-link></li>
+    </ul>
+  </nav>
+</template>
+
+<script>
+export default {
+  name: 'AppNavbar',
+};
+</script>
+
+<style scoped>
+.navbar {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+}
+
+.navbar a:hover {
+  color: #3498db;
+}
+</style>
