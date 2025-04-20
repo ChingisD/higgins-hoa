@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import HeroSection from '@/components/HeroSection.vue';
+import HeroSelection from '@/components/HeroSelection.vue';
 import AboutUs from '@/components/AboutUs.vue';
 import UserDashboard from '@/components/UserDashboard.vue';
 
@@ -10,7 +10,7 @@ Vue.use(Router);
 export default new Router({
   mode: 'history',
   routes: [
-    { path: '/', name: 'Home', component: HeroSection },
+    { path: '/', name: 'Home', component: HeroSelection },
     { path: '/about', name: 'About', component: AboutUs },
     { path: '/dashboard', name: 'Dashboard', component: UserDashboard },
   ],

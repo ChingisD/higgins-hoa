@@ -7,15 +7,11 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import router from './router'; // import the router
 
 
-Vue.config.productionTip = false;
 
-new Vue({
-  router, // add router here
-  render: h => h(App),
-}).$mount('#app');
 
 // Configure Amplify with the exported config
 Amplify.configure(awsExports)
 
-
-createApp(App).mount('#app');
+const app = createApp(App);
+app.use(router); // Only if router is set up
+app.mount('#app');
