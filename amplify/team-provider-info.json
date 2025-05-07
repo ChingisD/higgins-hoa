@@ -9,11 +9,15 @@
       "UnauthRoleName": "amplify-higgins-dev-e5de6-unauthRole",
       "StackName": "amplify-higgins-dev-e5de6",
       "StackId": "arn:aws:cloudformation:us-east-1:448383792778:stack/amplify-higgins-dev-e5de6/c3b1fbd0-1b15-11f0-9081-0affda198763",
-      "AmplifyAppId": "d1fl5gial2socp"
+      "AmplifyAppId": "d1fl5gial2socp",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-higgins-dev-e5de6-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
       "auth": {
         "higginscdad7a4b": {}
+      },
+      "function": {
+        "UserDataHandler": {}
       }
     }
   }

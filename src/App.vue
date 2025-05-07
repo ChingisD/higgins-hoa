@@ -29,7 +29,7 @@ export default {
   methods: {
     async createUser() {
       try {
-        const response = await fetch('https://4wy085db51.execute-api.us-east-1.amazonaws.com/Dev/users', {
+        const response = await fetch('${import.meta.env.VITE_API_URL}/users', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

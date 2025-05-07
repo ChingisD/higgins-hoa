@@ -9,7 +9,8 @@
       "UnauthRoleName": "amplify-higgins-dev-e5de6-unauthRole",
       "StackName": "amplify-higgins-dev-e5de6",
       "StackId": "arn:aws:cloudformation:us-east-1:448383792778:stack/amplify-higgins-dev-e5de6/c3b1fbd0-1b15-11f0-9081-0affda198763",
-      "AmplifyAppId": "d1fl5gial2socp"
+      "AmplifyAppId": "d1fl5gial2socp",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-higgins-dev-e5de6-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     }
   },
   "auth": {
@@ -40,7 +41,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-higgins-dev-e5de6-deployment/amplify-cfn-templates/auth/higginscdad7a4b-cloudformation-template.json",
         "logicalId": "authhigginscdad7a4b"
       },
-      "lastPushTimeStamp": "2025-04-19T03:08:12.582Z",
+      "lastPushTimeStamp": "2025-05-07T02:55:14.916Z",
       "output": {
         "UserPoolId": "us-east-1_jBFNmn9VF",
         "AppClientIDWeb": "11rcmfra4kd3fhreeta27o2iq4",
@@ -82,6 +83,27 @@
         "logicalId": "apihiggins"
       },
       "lastPushTimeStamp": "2025-04-19T03:08:47.171Z"
+    },
+    "RESTAPIforHOA": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "UserDataHandler",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ]
+    }
+  },
+  "function": {
+    "UserDataHandler": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
     }
   }
 }
